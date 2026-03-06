@@ -74,3 +74,6 @@ coverage/
 *.sqlite
 *.db
 *.tsbuildinfo
+
+#mac layout files 
+.DS_Store

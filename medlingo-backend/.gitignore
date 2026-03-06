@@ -44,3 +44,6 @@ terraform.tfvars
 *.tfstate
 *.tfstate.*
 .wav *.wav
+
+
+.DS_Store
