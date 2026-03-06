@@ -1,0 +1,72 @@
+# docker-compose.yml – FINAL: All services + correct ports + dependencies + volumes
+services:
+  api_gateway:
+    build: ./api_gateway
+    ports: ["8000:8000"]
+    env_file: .env
+    environment:
+      - PYTHONPATH=/app
+    volumes:
+      - ./audio_output:/app/audio_output
+    networks:
+      - medlingo-net
+    depends_on:
+      - session_manager_service
+      - audit_service
+      - speech_to_text_service
+      - text_translator_service
+      - text_to_speech_service
+
+  session_manager_service:
+    build: ./session_manager_service
+    ports: ["8001:8000"]
+    env_file: .env
+    environment:
+      - PYTHONPATH=/app
+    networks:
+      - medlingo-net
+
+  speech_to_text_service:
+    build: ./speech_to_text_service
+    ports: ["8002:8000"]
+    env_file: .env
+    environment:
+      - PYTHONPATH=/app
+    networks:
+      - medlingo-net
+
+  text_translator_service:
+    build: ./text_translator_service
+    ports: ["8003:8000"]
+    env_file: .env
+    environment:
+      - PYTHONPATH=/app
+    networks:
+      - medlingo-net
+
+  text_to_speech_service:
+    build: ./text_to_speech_service
+    ports: ["8004:8000"]
+    env_file: .env
+    environment:
+      - PYTHONPATH=/app
+    networks:
+      - medlingo-net
+
+  audit_service:
+    build: ./audit_service
+    ports: ["8005:8000"]
+    env_file: .env
+    environment:
+      - PYTHONPATH=/app
+    volumes:
+      - ./audit_logs:/app/data
+    networks:
+      - medlingo-net
+
+networks:
+  medlingo-net:
+    driver: bridge
+
+volumes:
+  audio_output:

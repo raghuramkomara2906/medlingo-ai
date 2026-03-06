@@ -1,0 +1,46 @@
+# ===== Python =====
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+.venv/
+venv/
+.env
+.env.*
+
+# ===== IDE / Editor =====
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*.swo
+
+# ===== Build / Dist =====
+dist/
+build/
+.eggs/
+*.egg-info
+
+# ===== Logs =====
+*.log
+logs/
+
+# ===== Docker =====
+**/__pycache__/
+**/.pytest_cache/
+EOF
+
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.crash
+.terraform/
+.terraform.lock.hcl
+terraform.tfvars
+*.tfvars
+.terraform/
+*.tfstate
+*.tfstate.*
+.wav *.wav

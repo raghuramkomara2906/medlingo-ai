@@ -1,0 +1,23 @@
+{
+  "expo": {
+    "name": "MedLingo Translator",
+    "slug": "medlingo-translator",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    
+    "userInterfaceStyle": "light",
+    
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.evara.healthtranslator"
+    },
+    "android": {
+      
+      "package": "com.evara.healthtranslator"
+    },
+    "web": {}
+  }
+}

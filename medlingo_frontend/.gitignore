@@ -1,0 +1,76 @@
+# -------------------------
+# Node / Package managers
+# -------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-lock.yaml
+package-lock.json
+
+# -------------------------
+# Expo
+# -------------------------
+.expo/
+.expo-shared/
+.expo/web-build/
+.expo/web-cache/
+.expo/packager-info.json
+.expo/settings.json
+dist/
+web-build/
+
+# -------------------------
+# React Native (Android)
+# -------------------------
+android/.gradle/
+android/.idea/
+android/app/build/
+android/local.properties
+android/build/
+*.apk
+*.keystore
+*.jks
+
+# -------------------------
+# React Native (iOS)
+# -------------------------
+ios/Pods/
+ios/build/
+ios/*.xcodeproj/xcuserdata/
+ios/*.xcworkspace/xcuserdata/
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcuserstate
+
+# -------------------------
+# macOS garbage
+# -------------------------
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# -------------------------
+# Editors
+# -------------------------
+.vscode/
+.idea/
+
+# -------------------------
+# Env / Sensitive files
+# -------------------------
+.env
+.env.local
+.env.*.local
+
+# -------------------------
+# Misc
+# -------------------------
+*.log
+npm-debug.log*
+coverage/
+*.sqlite
+*.db
+*.tsbuildinfo
